@@ -1,6 +1,6 @@
 import csv
 
-class K_Means_Clustering:
+class KMeansClustering:
     def euclidean_distance(self, point1, point2):
         return ((point1[0] - point2[0]) ** 2 + (point1[1] - point2[1]) ** 2) ** 0.5 
          
@@ -62,5 +62,5 @@ with open('data_points.csv') as csv_file:
         else:
             input_data_points.append((int(row[1]), int(row[2])))
 csv_file.close()
-k = K_Means_Clustering()
+k = KMeansClustering()
 k.iterate_k_means(input_data_points)
